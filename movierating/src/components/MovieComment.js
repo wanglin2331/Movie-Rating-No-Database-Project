@@ -87,8 +87,8 @@ class MovieComment extends Component {
                     <div className="rightbottom">
                         
                         <div className="review">
-                            Rating: <input id="rating" placeholder="Rating" onChange={(e)=>this.inputRating(e.target.value)} value={this.state.rating}/>
-                            Comment: <textarea id="comment" placeholder="Comment" onChange={(e)=>this.inputComment(e.target.value)} value={this.state.comment}/>
+                            Rating: <input id="rating" onChange={(e)=>this.inputRating(e.target.value)} value={this.state.rating}/>
+                            Comment: <textarea id="comment" onChange={(e)=>this.inputComment(e.target.value)} value={this.state.comment}/>
                             <button onClick={()=>this.updateRatingComment()}>Submit</button>
                         </div>
                     </div>

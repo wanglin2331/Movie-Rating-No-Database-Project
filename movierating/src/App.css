@@ -12,6 +12,23 @@ body {
     font-family: sans-serif;
 }
 
+input {
+    background-color: rgba(43, 43, 43, 0.253);
+    color: white;
+    border-color: rgb(163, 162, 162);
+}
+
+textarea{
+    background-color: rgba(43, 43, 43, 0.253);
+    color: white;
+}
+
+button {
+    color: white;
+    background-color: rgba(17, 17, 17, 0.863);
+    border-color: rgb(163, 162, 162);
+}
+
 .left {
     /* border: 3px solid black; */
     height: 605px;
@@ -25,6 +42,23 @@ body {
     color: white;
 }
 
+.searchtitle {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-top: 10px;
+}
+
+.searchtitle input {
+    width: 300px;
+}
+
+.searchtitle p {
+    font-size: 25px;
+}
+
 
 .movieList {
     margin: 10px;
@@ -36,10 +70,7 @@ body {
     color: white;
 }
 
-.movieList button {
-    color: white;
-    background-color: rgba(17, 17, 17, 0.863);
-}
+
 
 .movieDisplay {
     height: 470px;

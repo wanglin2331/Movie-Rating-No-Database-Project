@@ -78,7 +78,7 @@ class AddMovie extends Component {
     render() {
         return (
             <div className="addMovie">
-                
+                <p>Add Your Favorite Movie</p>
                 <input id="titlefield" onChange={(e)=>this.inputTitle(e.target.value)} placeholder="title"/>
                 <input id="typefield" onChange={(e)=>this.inputType(e.target.value)} placeholder="type"/>
                 <input id="imagefield" onChange={(e)=>this.inputPoster(e.target.value)} placeholder="image"/>

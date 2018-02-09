@@ -5,6 +5,8 @@ import './App.css';
 import MovieList from './components/MovieList';
 import AddMovie from './components/AddMovie';
 import MovieComment from './components/MovieComment';
+import SearchMovie from './components/SearchMovie';
+
 
 const localServer = 'http://localhost:3001/api/movies/';
 
@@ -12,10 +14,15 @@ class App extends Component {
   constructor(){
     super();
     this.state = {selectedMovie: {},
-                  moviesToDisplay: []};
+                  moviesToDisplay: [],
+                  searchTitle:""
+                };
 
     this.selectMovie=this.selectMovie.bind(this);
     this.refresh=this.refresh.bind(this);
+    this.inputSearch=this.inputSearch.bind(this);
+    this.showSearchResult=this.showSearchResult.bind(this);
+    this.ClearFields=this.ClearFields.bind(this);
   }
 
   componentDidMount () {
@@ -42,6 +49,29 @@ class App extends Component {
     })
   };
 
+
+  inputSearch(val){
+    this.setState({searchTitle: val});
+  };
+
+
+  showSearchResult(){
+    const searchResult=[];
+    
+    for(var i=0;i<this.state.moviesToDisplay.length;i++){
+      if(this.state.moviesToDisplay[i].title.includes(this.state.searchTitle)){
+          searchResult.push(this.state.moviesToDisplay[i])
+    }};
+    this.setState({moviesToDisplay: searchResult});
+    this.ClearFields();
+
+  };
+
+  ClearFields(){
+    document.getElementById("searchField").value = ""}
+
+
+
   render() {
 
     return (
@@ -53,13 +83,16 @@ class App extends Component {
 
         <body>
           <div className="left">
-                  <p>Movies</p>
-                  <MovieList moviesToDisplay={this.state.moviesToDisplay} selectMovie={this.selectMovie} 
-                              refresh={this.refresh}
-                  />
 
-                  <p>Add Your Favorite Movie</p>
-                  <AddMovie refresh={this.refresh}/>
+                  <SearchMovie  inputSearch={this.inputSearch}
+                                showSearchResult={this.showSearchResult}
+                                refresh={this.refresh}/>
+
+                  <MovieList  moviesToDisplay={this.state.moviesToDisplay}
+                              selectMovie={this.selectMovie} 
+                              refresh={this.refresh}/>
+
+                  <AddMovie   refresh={this.refresh}/>
           </div>
 
           <div className="right">
@@ -70,13 +103,9 @@ class App extends Component {
                             posterpath = {this.state.selectedMovie.posterpath}
                             rating = {this.state.selectedMovie.rating}
                             comment = {this.state.selectedMovie.comment}
-
                             refresh={this.refresh}
-                            select={this.selectMovie}
-              />
-
+                            select={this.selectMovie}/>
           </div>
-        
         </body>
       </div>
     );
