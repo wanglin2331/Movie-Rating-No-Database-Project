@@ -1,0 +1,180 @@
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: url(http://thesmartytrain.com/wp-content/uploads/2017/04/Cinema.jpg) no-repeat center center fixed;
+    background-size: cover; 
+}
+
+.title{
+    color: white;
+    font-family: sans-serif;
+}
+
+.left {
+    /* border: 3px solid black; */
+    height: 605px;
+    background-color: rgba(17, 17, 17, 0.863);
+    margin-right: 20px;
+
+}
+
+.left p {
+    margin:0;
+    color: white;
+}
+
+
+.movieList {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieList p {
+    color: white;
+}
+
+.movieList button {
+    color: white;
+    background-color: rgba(17, 17, 17, 0.863);
+}
+
+.movieDisplay {
+    height: 470px;
+    width: 750px;
+    padding: 10px;
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-content: space-around;  */
+    flex-wrap: wrap;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-left: 25px;
+
+}
+
+/* .movieDisplay li {
+    box-sizing: boarder-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.movieDisplay img {
+    width: 120px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.addMovie {
+    height: auto;
+    width: 800px;
+    /* border: 3px solid blue; */
+}
+
+#titlefield{
+    width: 300px;
+    margin: 5px 5px;
+}
+
+#typefield {
+    width: 120px;
+    margin-right: 5px;
+}
+
+#imagefield {
+    width: 339px;
+}
+
+#overviewfield {
+    width: 670px;
+    margin-left:5px;
+    margin-right: 10px;
+}
+
+.right{
+    color: white;
+    /* border: 3px solid black; */
+    width: 600px;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(17, 17, 17, 0.863);
+}
+
+.movieInfo {
+    height: 40px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    /* border: 2px solid white; */
+}
+
+.movieInfo p {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+.right img{
+    /* border: 3px solid black; */
+    width: 250px;
+    margin: 10px;
+}
+
+.imgOverview {
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid black; */
+    height: 380px;
+    width: 500px;
+}
+
+.imgOverview span {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 17px;
+
+}
+
+.rightbottom {
+    /* border: 3px solid black; */
+    height: 200px;
+    width: 500px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+#comment{
+    height: 70px;
+    width: 500px;
+    word-wrap: break-word;
+
+}
